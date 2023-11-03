@@ -1,0 +1,672 @@
+ballistic_zombies:
+- chance: 25
+  start_team: Scp, Revived
+  id: 1
+  role: Scp0492
+  max_health: 500
+  name: 'Ballistic Zombie'
+  description: 'A regular zombie that will explode when killed.'
+  custom_info: 'Ballistic Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities:
+  - name: 'Martyrdom'
+    description: 'Causes the player to explode upon death.'
+    # Changing this will likely break your config.
+    ability_type: 'Martyrdom'
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+berserk_zombies:
+- chance: 25
+  start_team: Scp, Revived
+  id: 2
+  role: Scp0492
+  max_health: 250
+  name: 'Berserk Zombie'
+  description: 'A zombie that gains more speed when they kill someone.'
+  custom_info: 'Berserk Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities:
+  - name: 'Speed on Kill'
+    description: 'Gives the user speed when they kill another player.'
+    duration: 5
+    # The highest intensity level of SCP-207 speed this ability can give.
+    intensity_limit: 2
+    # Changing this will likely break your config.
+    ability_type: 'SpeedOnKill'
+  - name: 'Heal on Kill'
+    description: 'Heals the player when they kill someone.'
+    # How much health to give the player.
+    heal_amount: 100
+    # Whether or not this heal can exceed their max health.
+    heal_over_max: false
+    # Whether or not this heal is applied gradually over time (true) or instantly (false)
+    heal_over_time: true
+    # How long the heal over time effect lasts, if used.
+    heal_over_time_duration: 10
+    # How often (in seconds) the heal over time effect ticks, if used.
+    heal_over_time_tick_frequency: 1
+    # Whether or not the heal over time effect is ended early if the player takes damage.
+    damage_interrupts_hot: true
+    # Changing this will likely break your config.
+    ability_type: 'HealOnKill'
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+charger_zombies:
+- chance: 30
+  start_team: Scp, Revived
+  id: 3
+  role: Scp0492
+  max_health: 700
+  name: 'Charger Zombie'
+  description: 'A zombie that is able to occasionally charge at high speed in a certain direction. If they come into contact with another player they will lock them in place for a few seconds.'
+  custom_info: 'Charger Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities:
+  - name: 'Charge'
+    description: 'Charges towards the target location.'
+    duration: 0
+    cooldown: 45
+    # The amount of damage inflicted when the player collides with something.
+    contact_damage: 15
+    # The bonus multiplier if the target player wasn't moving.
+    accuracy_multiplier: 2
+    # How long the ensnare effect lasts.
+    ensnare_duration: 5
+    # Changing this will likely break your config.
+    ability_type: 'ChargeAbility'
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+demolitionists:
+- chance: 100
+  start_team: Ntf
+  id: 4
+  role: NtfSpecialist
+  max_health: 120
+  name: 'Demolitionist'
+  inventory:
+  - 'GL-119'
+  - 'C4-119'
+  - 'C4-119'
+  - 'GrenadeHE'
+  - 'GrenadeHE'
+  - 'GrenadeHE'
+  - 'GrenadeHE'
+  - 'Radio'
+  description: 'An NTF Specialist who specializes in explosive ordinance. Spawns with a Grenade Launcher, a number of grenades and some C4.'
+  custom_info: 'Demolitionist'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+dwarves:
+- chance: 100
+  start_team: ClassD
+  id: 5
+  role: None
+  max_health: 100
+  name: 'Dwarf'
+  description: 'A normal player who has unlimited stamina, and is slightly smaller than normal.'
+  custom_info: 'Dwarf'
+  keep_inventory_on_spawn: true
+  keep_role_on_death: true
+  removal_kills_player: false
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities: []
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+dwarf_zombies:
+- chance: 20
+  start_team: Scp, Revived
+  id: 6
+  role: Scp0492
+  max_health: 450
+  name: 'Dwarf Zombie'
+  description: 'A weaker, smaller, amd faster zombie than its brothers.'
+  custom_info: 'Dwarf Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities: []
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+medics:
+- chance: 100
+  start_team: Ntf
+  id: 7
+  role: NtfSpecialist
+  max_health: 120
+  name: 'Medic'
+  description: |-
+    A medic, equipped with a Medigun, TranqGun, EMP Grenade, and has the ability to activate a mist of healing chemicals around them, protecting nearby allies.
+    You can use ".special" to activate a spray of healing mist to heal and fortify nearby allies.
+    You can keybind this ability with "cmdbind KEY .special"
+  custom_info: 'Medic'
+  inventory:
+  - 'MG-119'
+  - 'TG-119'
+  - 'EM-119'
+  - 'Medkit'
+  - 'Adrenaline'
+  - 'Painkillers'
+  - 'KeycardMTFOperative'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points:
+    - role: NtfSpecialist
+      chance: 100
+  custom_abilities:
+  - name: 'Healing Mist'
+    description: 'Activates a short-term spray of chemicals which will heal and protect allies for a short duration.'
+    duration: 15
+    cooldown: 180
+    # The amount healed every second the ability is active.
+    heal_amount: 6
+    # The amount of AHP given when the ability ends.
+    protection_amount: 45
+    # Changing this will likely break your config.
+    ability_type: 'HealingMist'
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+medic_zombies:
+- chance: 15
+  start_team: Scp, Revived
+  id: 8
+  role: Scp0492
+  max_health: 500
+  name: 'Medic Zombie'
+  description: 'A slightly slower and weaker zombie that heals nearby SCPs'
+  custom_info: 'Medic Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities:
+  - name: 'Healing Mist'
+    description: 'Activates a short-term spray of chemicals which will heal and protect allies for a short duration.'
+    duration: 15
+    cooldown: 180
+    # The amount healed every second the ability is active.
+    heal_amount: 6
+    # The amount of AHP given when the ability ends.
+    protection_amount: 45
+    # Changing this will likely break your config.
+    ability_type: 'HealingMist'
+  - name: 'Reduced movement speed.'
+    description: 'Reduces the player''s movement speed.'
+    # Changing this will likely break your config.
+    ability_type: 'MoveSpeedReduction'
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+pd_zombies:
+- chance: 15
+  start_team: Scp, Revived
+  id: 9
+  role: Scp0492
+  max_health: 500
+  name: 'Pocket Dimension Zombie'
+  description: 'A zombie with ballistic damage resistance, but is instantly killed by flash grenades. Has a 25% chance when hitting someone to teleport them to the Pocket Dimension'
+  custom_info: 'Pocket Dimension Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  # The chance the zombie has on each melee hit to teleport the target to the pocket dimension.
+  teleport_chance: 25
+  custom_abilities: []
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+phantoms:
+- chance: 100
+  start_team: Guard
+  id: 10
+  role: ChaosConscript
+  max_health: 120
+  name: 'Chaos Phantom'
+  description: |-
+    A Chaos Insurgency outfitted with an active-camo suit that allows them to go invisible at will.
+
+    Use the Client console command ".special" to activate this ability. This can be keybound with "cmdbind KEY .special"
+  custom_info: 'Chaos Phantom'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points:
+    - role: FacilityGuard
+      chance: 100
+  inventory:
+  - 'SR-119'
+  - 'IG-119'
+  - 'EM-119'
+  - 'SCP-127'
+  - 'Medkit'
+  - 'KeycardChaosInsurgency'
+  - 'Adrenaline'
+  - 'SCP268'
+  ammo:
+    Nato556: 25
+  custom_abilities:
+  - name: 'Active Camo'
+    description: 'Activates a camouflage effect that acts like SCP-268 but doesn''t break on interacting with objects, only when shooting.'
+    duration: 30
+    cooldown: 120
+    # Changing this will likely break your config.
+    ability_type: 'ActiveCamo'
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+plague_zombies:
+- chance: 40
+  start_team: Scp, Revived
+  id: 11
+  role: Scp0492
+  max_health: 500
+  name: 'Plague Zombie'
+  description: |-
+    A slower and weaker zombie that is infectious with SCP-008. You can launch a projectile that will poison enemies near where it hits with the console command `.special`.
+    It is recommended you keybind this by running the console command `cmdbind g .special`.
+    This keybind applies to all roles with special abilities.
+  custom_info: 'Plague Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  custom_abilities:
+  - name: 'Projectile'
+    description: 'Shoots an item in the direction you are facing.'
+    duration: 1
+    cooldown: 35
+    # The speed of the projectile.
+    speed: 8
+    # How high the projectile arcs upwards when thrown.
+    arc_height: 3
+    # Changing this will likely break your config.
+    ability_type: 'ProjectileAbility'
+  - name: 'Reduced movement speed.'
+    description: 'Reduces the player''s movement speed.'
+    # Changing this will likely break your config.
+    ability_type: 'MoveSpeedReduction'
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+tank_zombies:
+- chance: 10
+  start_team: Scp, Revived
+  id: 13
+  role: Scp0492
+  max_health: 1100
+  name: 'Juggernaut Zombie'
+  description: 'A slightly slower zombie with double the regular health. As you take damage your AHP meter will fill. The higher it''s value, the less damage you take.'
+  custom_info: 'Juggernaut Zombie'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: []
+  # The maximum value of his hume shield. Higher values take longer for the hume to fill, meaning he takes more damage before reaching the maximum reduction from his shield.
+  hume_max: 500
+  # The rate at which his hume shield will decay.
+  hume_decay_rate: 2.5
+  custom_abilities:
+  - name: 'Reactive Hume Shield'
+    description: 'A Hume shield that builds up in power as the player takes damage. Instead of negating damage, it instead reduced incoming damage based on how full the shield is.'
+    # Changing this will likely break your config.
+    ability_type: 'ReactiveHume'
+  - name: 'Reduced movement speed.'
+    description: 'Reduces the player''s movement speed.'
+    # Changing this will likely break your config.
+    ability_type: 'MoveSpeedReduction'
+  inventory: []
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: ''
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'You have spawned as a custom role!'
+  ability_usage: 'Enter ".special" in the console to use your ability. If you have multiple abilities, you can use this command to cycle through them, or specify the one to use with ".special ROLENAME AbilityNum"'
+swat_armor:
+- chance: 25
+  start_team: Tutorial, Scp
+  id: 14
+  role: Scp912
+  max_health: 1200
+  name: 'SWAT Arm'
+  description: 'A Armor.'
+  custom_info: 'Swat Arm'
+  spawn_properties:
+    limit: 1
+    dynamic_spawn_points: []
+    static_spawn_points: []
+    role_spawn_points: 
+    - 914
+  custom_abilities:
+  - name: []
+    description: []
+    ability_type: []
+  inventory: 
+  - KeycardGuard
+  ammo: {}
+  keep_position_on_spawn: false
+  keep_inventory_on_spawn: false
+  removal_kills_player: true
+  keep_role_on_death: false
+  spawn_chance: 0
+  ignore_spawn_system: false
+  keep_role_on_changing_role: false
+  broadcast:
+  # The broadcast content
+    content: 'you are become scp 912'
+    # The broadcast duration
+    duration: 10
+    # The broadcast type
+    type: Normal
+    # Indicates whether the broadcast should be shown or not
+    show: true
+  display_custom_item_messages: true
+  scale:
+    x: 1
+    y: 1
+    z: 1
+  custom_role_f_f_multiplier: {}
+  console_message: 'Banned Role'
+  ability_usage: 
